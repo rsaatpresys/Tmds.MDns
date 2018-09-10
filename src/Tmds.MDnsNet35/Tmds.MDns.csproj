@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9340D2C-9CAA-43AD-9531-63C35AE655B5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tmds.MDns</RootNamespace>
+    <AssemblyName>Tmds.MDns</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NET35</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NET35</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Tmds.MDns\DnsMessageReader.cs">
+      <Link>DnsMessageReader.cs</Link>
+    </Compile>
+    <Compile Include="..\Tmds.MDns\DnsMessageWriter.cs">
+      <Link>DnsMessageWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\Tmds.MDns\HashSet.cs">
+      <Link>HashSet.cs</Link>
+    </Compile>
+    <Compile Include="..\Tmds.MDns\HostAddresses.cs">
+      <Link>HostAddresses.cs</Link>
+    </Compile>
+    <Compile Include="..\Tmds.MDns\HostInfo.cs">
+      <Link>HostInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Tmds.MDns\Label.cs">
+      <Link>Label.cs</Link>
+    </Compile>
+    <Compile Include="..\Tmds.MDns\NetworkInterfaceEventArgs.cs">
+      <Link>NetworkInterfaceEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Tmds.MDns\NetworkInterfaceHandler.cs">
+      <Link>NetworkInterfaceHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\Tmds.MDns\QueryParameters.cs">
+      <Link>QueryParameters.cs</Link>
+    </Compile>
+    <Compile Include="..\Tmds.MDns\ReadOnlyCollectionWrapper.cs">
+      <Link>ReadOnlyCollectionWrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\Tmds.MDns\RecordClass.cs">
+      <Link>RecordClass.cs</Link>
+    </Compile>
+    <Compile Include="..\Tmds.MDns\RecordSection.cs">
+      <Link>RecordSection.cs</Link>
+    </Compile>
+    <Compile Include="..\Tmds.MDns\RecordType.cs">
+      <Link>RecordType.cs</Link>
+    </Compile>
+    <Compile Include="..\Tmds.MDns\ServiceAnnouncement.cs">
+      <Link>ServiceAnnouncement.cs</Link>
+    </Compile>
+    <Compile Include="..\Tmds.MDns\ServiceAnnouncementEventArgs.cs">
+      <Link>ServiceAnnouncementEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Tmds.MDns\ServiceBrowser.cs">
+      <Link>ServiceBrowser.cs</Link>
+    </Compile>
+    <Compile Include="..\Tmds.MDns\ServiceHandler.cs">
+      <Link>ServiceHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\Tmds.MDns\ServiceInfo.cs">
+      <Link>ServiceInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Tmds.MDns\Tuple.cs">
+      <Link>Tuple.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
