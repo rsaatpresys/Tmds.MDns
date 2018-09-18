@@ -13,7 +13,8 @@ namespace ServiceFinder
 
         static void Main(string[] args)
         {
-            string serviceType = "_http._tcp";
+            string serviceType = "_modbustcp" +
+                                 "._tcp";
             if (args.Length >= 1)
             {
                 serviceType = args[0];
@@ -23,10 +24,12 @@ namespace ServiceFinder
             serviceBrowser.ServiceAdded += onServiceAdded;
             serviceBrowser.ServiceRemoved += onServiceRemoved;
             serviceBrowser.ServiceChanged += onServiceChanged;
-
+            
             Console.WriteLine("Browsing for type: {0}", serviceType);
             serviceBrowser.StartBrowse(serviceType);
+            System.Threading.Thread.Sleep(10000);
             Console.ReadLine();
+
         }
 
         static void onServiceChanged(object sender, ServiceAnnouncementEventArgs e)
